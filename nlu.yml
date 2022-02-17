@@ -1,0 +1,72 @@
+version: "2.0"
+
+nlu:
+
+- intent: demo
+  examples: |
+    - Start
+    - start
+    - go
+    - Go
+    
+- intent: mood_good
+  examples: |
+    - Pretty good
+    - pretty good
+    - not so great
+    - Not so great
+    
+- intent: mood_not_good
+  examples: |
+    - Very bad  
+    - very bad
+    - Very Bad  
+    
+- intent: affirm
+  examples: |
+    - Yes
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - Yes
+    
+- intent: confirmation
+  examples: |
+    - sure
+    - Sure
+  
+- intent: deny
+  examples: |
+    - No
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    
+- intent: none
+  examples: |
+    - not really
+    - Not Really
+    - Not really
+
+- intent: depression
+  examples: |
+    - mild
+    - Mild
+    
+- intent: depression2
+  examples: |
+    - Moderate/Severe
+    - moderate
+    - severe
+    - Moderate
+    - Severe
+    
+    
+  
+  

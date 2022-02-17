@@ -1,0 +1,41 @@
+version: "2.0"
+
+stories:
+
+- story: start demo
+  steps:
+  - intent: demo
+  - action: utter_demo
+  - action: utter_demo_how
+  
+- story: start demo1
+  steps:
+  - intent: mood_good
+  - action: utter_mood_good
+  - intent: mood_not_good
+  - action: utter_not_good
+  - action: utter_not_good_new
+  
+- story: start demo2
+  steps:
+  - intent: affirm
+  - action: utter_affirm
+  - action: utter_not_good_new
+  - intent: deny
+  - action: utter_deny
+  
+- story: start demo3  
+  steps:
+  - intent: none
+  - action: utter_deny_yourself
+  - action: utter_deny_yourself1
+  - intent: confirmation
+  - action: utter_confirmation
+  
+- story: start demo5
+  steps:
+  - intent: depression
+  - action: utter_depression
+  - intent: depression2
+  - action: utter_depression2
+  
