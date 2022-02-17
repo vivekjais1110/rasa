@@ -1,0 +1,76 @@
+version: "2.0"
+
+intents:
+  - demo
+  - none
+  - mood_good
+  - mood_not_good
+  - affirm
+  - confirmation
+  - deny
+  - depression
+  - depression2
+  
+responses:
+  utter_demo:
+  - text: "Hi,I'm PsyBot! I'm your mental health companion"
+  
+  utter_demo_how: 
+  - text: "How are you feeling today?"
+    buttons:
+    - title: "Not so Great"
+      payload: "/mood_good"
+    - title: "Pretty Good"
+      payload: "/mood_good"
+    - title: "Very Bad"
+      payload: "/mood_not_good"
+      
+  utter_mood_good:
+  - text: "Is there something you would like to talk about?"
+    buttons:
+    - title: "No"
+      payload: "/deny"
+    - title: "Yes"
+      payload: "/affirm"
+      
+  utter_not_good:
+  - text: "I'm sorry to hear that! Is there something that is troubling you?"
+  
+  utter_not_good_new:
+  - text: "<Manual input by user about situation / emotion / thought>"
+  
+  utter_affirm:
+  - text: "Go on, I'm listening."
+  
+  utter_deny:
+  - text: "That's ok! Would you like to answer a few question for me?"
+    buttons:
+    - title: "Not really"
+      payload: "/none"
+    - title: "Sure"
+      payload: "/confirmation"
+      
+  utter_deny_yourself:
+  - text: "Would you like to distractor calm yourself?"
+  
+  utter_deny_yourself1:
+  - text: "Suggest simple games,jokes by bot,or calming exercises"
+ 
+  utter_confirmation:
+  - text: "administer GAD-7,PHQ-9 in chat format \n Looks like you have mild / moderate / severe / anxiety / depression"
+    buttons:
+    - title: "Mild"
+      payload: "/depression"
+    - title: "Moderate/Severe"
+      payload: "/depression2"
+      
+  utter_depression:
+  - text: "I can help you with that! Would you like to start with a few exercise that could help? \n Start CBT model week1"
+  
+  utter_depression2:
+  - text: "We suggest you to talk to a human an therapist.<link to therapy page> Meanwhile, would you like to try a few exercises that would help?"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
